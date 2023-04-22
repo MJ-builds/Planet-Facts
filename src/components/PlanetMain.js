@@ -35,11 +35,9 @@ const PlanetMain = () => {
     <>
       <div className="main-container">
         <PlanetImager />
-        <div className="planet-info-container">
-          <PlanetInformation />
-        </div>
+        <PlanetInformation />
         <PlanetStats />
-      </div>
+        </div>
     </>
   );
 };
