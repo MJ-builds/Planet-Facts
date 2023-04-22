@@ -6,6 +6,7 @@ import { usePlanetContext } from "../context/PlanetContext";
 import PlanetStats from "./PlanetStats";
 import PlanetImager from "./PlanetImager";
 import PlanetInformation from "./PlanetInformation";
+import Header from "./Header";
 
 import "../App.css";
 
@@ -33,11 +34,20 @@ const PlanetMain = () => {
 
   return (
     <>
-      <div className="main-container">
+    <div className = 'custom-grid'>
+      <div className="row-span-1 col-span-5 border-white border">
+        <Header />
+      </div>
+      <div className="scale-75 row-start-2 row-end-2 col-span-3 border-white border flex justify-around items-center">
         <PlanetImager />
+      </div>
+      <div className="row-start-2 row-end-3 col-start-4 col-end-4 border-white border flex items-center justify-items-center">
         <PlanetInformation />
-        <PlanetStats />
-        </div>
+      </div>
+      <div className = "row-start-3 row-end-3 col-start-1 col-end-5 border-white border flex justify-around items-center">
+      <PlanetStats />
+      </div>
+      </div>
     </>
   );
 };

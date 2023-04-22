@@ -9,7 +9,7 @@ const PlanetInformation = () => {
   const { planetInfo, activeButton, buttonCategory } = usePlanetContext();
   
   return (
-    <div>
+    <div className = "">
       <h1 className="planet-info-header">{planetInfo.name.toUpperCase()}</h1>
       <p className="planet-info-overview league-spartan">
         {planetInfo[`${buttonCategory[activeButton]}_content`]}

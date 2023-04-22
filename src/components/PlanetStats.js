@@ -26,13 +26,10 @@ const Stats = () => {
   return (
     <>
       {/* bottom planet info 4x container */}
-      <div className = "container-bottom ">
-
         {createStatBox("rotation", "ROTATION TIME")}
         {createStatBox("revolution", "REVOLUTION TIME")}
         {createStatBox("radius", "RADIUS")}
         {createStatBox("temperature", "AVERAGE TEMP.")}
-      </div>
     </>
   );
 };

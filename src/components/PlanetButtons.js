@@ -18,7 +18,7 @@ const ButtonsOverview = () => {
  */
   const createButton = (activeButtonNum, buttonNumLabel, buttonLabel) => {
     return (
-      <div className = 'btn'>
+      <div className = ''>
         <button
           className={activeButton === activeButtonNum ? "active" : ""}
           onClick={() => handleButtonClick(activeButtonNum)}

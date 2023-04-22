@@ -7,7 +7,7 @@ const PlanetImager = () => {
 
   return (
     <>
-      <div className="image-container">
+      <div className="">
         <img
           className="planet-image"
           src={
