@@ -3,6 +3,8 @@ import { Link } from "react-router-dom";
 
 import { usePlanetContext } from "../context/PlanetContext";
 
+import PlanetButtons from "./PlanetButtons";
+
 const PlanetInformation = () => {
   const { planetInfo, activeButton, buttonCategory } = usePlanetContext();
   
@@ -33,8 +35,10 @@ const PlanetInformation = () => {
             />
           </svg>
         </Link>
-        <span></span>
       </p>
+      <div className="buttons_container league-spartan">
+            <PlanetButtons />
+          </div>
     </div>
   );
 };

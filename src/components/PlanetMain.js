@@ -4,7 +4,6 @@ import { useParams } from "react-router-dom";
 import { usePlanetContext } from "../context/PlanetContext";
 
 import PlanetStats from "./PlanetStats";
-import PlanetButtons from "./PlanetButtons";
 import PlanetImager from "./PlanetImager";
 import PlanetInformation from "./PlanetInformation";
 
@@ -38,9 +37,6 @@ const PlanetMain = () => {
         <PlanetImager />
         <div className="planet-info-container">
           <PlanetInformation />
-          <div className="planet-buttons league-spartan">
-            <PlanetButtons />
-          </div>
         </div>
         <PlanetStats />
       </div>
