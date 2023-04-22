@@ -3,15 +3,13 @@ import { BrowserRouter as Router, Route, Routes, Navigate } from "react-router-d
 
 import "./App.css";
 
-import Header from "./components/Header";
 import PlanetMain from "./components/PlanetMain";
 import ErrorPage from "./components/ErrorPage";
 
 function App() {
   return (
-    <div className="app-container svg-background">
+    <div className="APP-MAIN grid svg-background bg-darkblue bg-cover h-screen text-white">
       <Router>
-      <Header />
         <Routes>
         <Route path="/" element={<Navigate to="/planets/earth" />} />
         <Route path="/planets/:activePlanet" element={<PlanetMain />} />
