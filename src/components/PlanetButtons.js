@@ -18,7 +18,6 @@ const ButtonsOverview = () => {
  */
   const createButton = (activeButtonNum, buttonNumLabel, buttonLabel) => {
     return (
-      <div>
         <button
           className={activeButton === activeButtonNum ? "active" : ""}
           onClick={() => handleButtonClick(activeButtonNum)}
@@ -31,7 +30,6 @@ const ButtonsOverview = () => {
         >
           <span className="button_numbers">{buttonNumLabel}</span> {buttonLabel}
         </button>
-      </div>
     );
   };
 
