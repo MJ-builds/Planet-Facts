@@ -38,7 +38,7 @@ const PlanetMain = () => {
       <div className="row-span-1 col-span-5 border-white border">
         <Header />
       </div>
-      <div className="scale-75 row-start-2 row-end-2 col-span-3 border-white border flex justify-around items-center">
+      <div className = "row-start-2 row-end-2 col-span-3 border-white border flex justify-center items-center">
         <PlanetImager />
       </div>
       <div className="row-start-2 row-end-3 col-start-4 col-end-4 border-white border flex items-center justify-items-center">

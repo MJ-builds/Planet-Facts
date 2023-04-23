@@ -7,9 +7,9 @@ const PlanetImager = () => {
 
   return (
     <>
-      <div className="">
+    <div className="planet-image-container">
         <img
-          className="planet-image"
+          className="planet-image object-cover px-10 py-10"
           src={
             activeButton !== 2
               ? planetInfo[`image_${buttonCategory[activeButton]}`]
@@ -19,12 +19,12 @@ const PlanetImager = () => {
         />
         {activeButton === 2 ? (
           <img
-            className="planet-image planet-image-geology"
+            className="planet-image planet-image-geology object-contain"
             src={planetInfo.image_geology}
             alt={`${planetInfo.name} geology`}
           />
         ) : null}
-      </div>
+        </div>
     </>
   );
 };
