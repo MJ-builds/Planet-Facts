@@ -10,13 +10,13 @@ const PlanetInformation = () => {
 
   return (
     <div className="INFO-CONTAINER custom-grid-pi gap-10">
-      <h1 className="HEADING row-span-1 col-span-1 flex items-end text-6xl">
+      <h1 className="HEADING row-span-1 col-span-1 flex items-end text-6xl -mb-5">
         {planetInfo.name.toUpperCase()}
       </h1>
-      <p className="INFO font-spartan row-start-2 row-end-2 col-start-1 col-end-1 flex items-center text-grey text-lg">
+      <p className="INFO font-spartan row-start-2 row-end-2 col-start-1 col-end-1 flex items-center text-grey text-sm">
         {planetInfo[`${buttonCategory[activeButton]}_content`]}
       </p>
-      <p className="SOURCE text-darkgrey font-spartan row-start-3 row-end-3 col-start-1 col-end-1 flex items-center">
+      <p className="SOURCE text-darkgrey font-spartan row-start-3 row-end-3 col-start-1 col-end-1 flex items-center -mt-10">
         Source:{" "}
         <Link
           className="wiki-link flex items-center underline decoration-darkgrey text-grey ml-4"
@@ -38,7 +38,7 @@ const PlanetInformation = () => {
           </svg>
         </Link>
       </p>
-      <div className="row-start-4 row-end-4 col-start-1 col-end-1 flex flex-col font-spartan gap-4 ">
+      <div className="row-start-4 row-end-4 col-start-1 col-end-1 flex flex-col font-spartan gap-3 -mt-10">
         <PlanetButtons />
       </div>
     </div>

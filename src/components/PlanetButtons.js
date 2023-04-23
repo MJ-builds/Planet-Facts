@@ -18,7 +18,7 @@ const ButtonsOverview = () => {
  */
   const createButton = (activeButtonNum, buttonNumLabel, buttonLabel) => {
     return (
-      <div className = 'border border-darkgrey flex h-[30%] min-h-[50px]'>
+      <div className = 'border border-darkgrey flex h-[30%]'>
         <button
           className={`text-left text-sm font-medium w-full tracking-widest ${activeButton === activeButtonNum ? "active" : ""}`}
           onClick={() => handleButtonClick(activeButtonNum)}

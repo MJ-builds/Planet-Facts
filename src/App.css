@@ -14,6 +14,7 @@ body {
   --darkgrey: #38384F;
       --grey: #838391;
       --white: #ffffff;
+      
 }
 nav a {
   color: var(--grey);
@@ -26,7 +27,7 @@ nav a:hover {
 .custom-grid {
   display: grid;
   grid-template-columns: 0.5fr 2fr 1fr 1fr 1.5fr 0.5fr;
-  grid-template-rows: 79px 6fr 2fr ;
+  grid-template-rows: 79px 6fr 2fr ; 
 }
 .custom-grid-pi {
   display: grid;

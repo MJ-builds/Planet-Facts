@@ -15,7 +15,7 @@ const Stats = () => {
   const createStatBox = (planetStat, planetStatLabel) => {
     return (
       // add back pt-2
-      <div className="border border-darkgrey w-full h-[50%] flex flex-col justify-center pl-5">
+      <div className="border border-darkgrey w-full h-[80%] flex flex-col justify-center pl-5">
         <div className="text-m font-spartan text-grey ">{planetStatLabel}</div>
         <div className="text-4xl pt-1">
           {planetInfo[planetStat].toUpperCase()}
