@@ -34,7 +34,7 @@ const PlanetMain = () => {
 
   return (
     <>
-    <div className = 'custom-grid '>
+    <div className = 'custom-grid'>
       <div className="row-span-1 col-span-6 w-full">
         <Header />
       </div>
