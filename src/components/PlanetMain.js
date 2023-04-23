@@ -35,16 +35,16 @@ const PlanetMain = () => {
   return (
     <>
     <div className = 'custom-grid'>
-      <div className="row-span-1 col-span-5 border-white border">
+      <div className="row-span-1 col-span-6 ">
         <Header />
       </div>
-      <div className = "row-start-2 row-end-2 col-span-3 border-white border flex justify-center items-center">
+      <div className = "row-start-2 row-end-2 col-start-2 col-end-5 flex justify-center items-center">
         <PlanetImager />
       </div>
-      <div className="row-start-2 row-end-3 col-start-4 col-end-4 border-white border flex items-center justify-items-center">
+      <div className="row-start-2 row-end-3 col-start-5 col-end-6 flex  justify-items-center">
         <PlanetInformation />
       </div>
-      <div className = "row-start-3 row-end-3 col-start-1 col-end-5 border-white border flex justify-around items-center">
+      <div className = "row-start-3 row-end-3 col-start-2 col-end-6 flex items-center justify-self-end w-[100%] gap-8">
       <PlanetStats />
       </div>
       </div>

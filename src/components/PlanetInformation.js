@@ -7,23 +7,25 @@ import PlanetButtons from "./PlanetButtons";
 
 const PlanetInformation = () => {
   const { planetInfo, activeButton, buttonCategory } = usePlanetContext();
-  
+
   return (
-    <div className = " ">
-      <h1 className="planet-info-header">{planetInfo.name.toUpperCase()}</h1>
-      <p className="planet-info-overview league-spartan">
+    <div className="INFO-CONTAINER custom-grid-pi">
+      <h1 className="HEADING row-span-1 col-span-1 flex items-end text-6xl">
+        {planetInfo.name.toUpperCase()}
+      </h1>
+      <p className="INFO font-spartan row-start-2 row-end-2 col-start-1 col-end-1 flex items-center text-grey">
         {planetInfo[`${buttonCategory[activeButton]}_content`]}
       </p>
-      <p className="planet-info-source league-spartan">
+      <p className="SOURCE text-darkgrey font-spartan row-start-3 row-end-3 col-start-1 col-end-1 flex items-center">
         Source:{" "}
         <Link
-          className="planet-info-source-wiki"
+          className="wiki-link flex items-center underline decoration-darkgrey text-grey"
           to={planetInfo.overview_source}
           target="_blank"
         >
           Wikipedia
           <svg
-            className="source-icon-svg"
+            className="source-icon-svg inline ml-2"
             xmlns="http://www.w3.org/2000/svg"
             width="12"
             height="12"
@@ -36,9 +38,9 @@ const PlanetInformation = () => {
           </svg>
         </Link>
       </p>
-      <div className="flex flex-row items-center justify-center">
-            <PlanetButtons />
-          </div>
+      <div className="row-start-4 row-end-4 col-start-1 col-end-1 flex flex-col font-spartan gap-3 ">
+        <PlanetButtons />
+      </div>
     </div>
   );
 };

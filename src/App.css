@@ -24,8 +24,13 @@ a:hover {
 }
 .custom-grid {
   display: grid;
-  grid-template-columns: 2fr 1fr 1fr 1.5fr 0.5fr;
-  grid-template-rows: 79px 6fr 2fr;
+  grid-template-columns: 0.5fr 2fr 1fr 1fr 1.5fr 0.5fr;
+  grid-template-rows: 79px 6fr 2fr ;
+}
+.custom-grid-pi {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 2fr 3fr 1fr 3fr;
 }
 .planet-image-container {
   max-width: 80%;

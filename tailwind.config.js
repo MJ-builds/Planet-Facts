@@ -1,4 +1,6 @@
 /** @type {import('tailwindcss').Config} */
+const colors = require('tailwindcss/colors')
+
 module.exports = {
   mode: 'jit',
   content: ["./src/**/*.{html,js}"],
@@ -10,6 +12,7 @@ module.exports = {
       }
     },
     colors: {
+      ...colors,
       transparent: 'transparent',
       current: 'currentColor',
       'darkblue': '#070724',

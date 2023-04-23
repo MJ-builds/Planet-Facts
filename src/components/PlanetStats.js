@@ -14,9 +14,10 @@ const Stats = () => {
   */
   const createStatBox = (planetStat, planetStatLabel) => {
     return (
-      <div className="stats-inner">
-        <div className="stats-inner-header">{planetStatLabel}</div>
-        <div className="stats-inner-stats">
+      // add back pt-2
+      <div className="border border-darkgrey w-full h-[70%] flex flex-col justify-center pl-5">
+        <div className="text-m font-spartan text-grey ">{planetStatLabel}</div>
+        <div className="text-4xl pt-1">
           {planetInfo[planetStat].toUpperCase()}
         </div>
       </div>

@@ -18,9 +18,9 @@ const ButtonsOverview = () => {
  */
   const createButton = (activeButtonNum, buttonNumLabel, buttonLabel) => {
     return (
-      <div className = ''>
+      <div className = 'border border-darkgrey flex h-[28%]'>
         <button
-          className={activeButton === activeButtonNum ? "active" : ""}
+          className={`text-left text-sm font-medium w-full tracking-widest ${activeButton === activeButtonNum ? "active" : ""}`}
           onClick={() => handleButtonClick(activeButtonNum)}
           style={{
             backgroundColor:
@@ -29,7 +29,7 @@ const ButtonsOverview = () => {
               activeButton === activeButtonNum ? planetInfo.button_color : "",
           }}
         >
-          <span className="button_numbers">{buttonNumLabel}</span> {buttonLabel}
+          <span className="text-left text-sm text-grey tracking-widest ml-5 mr-5 button_numbers">{buttonNumLabel}</span> {buttonLabel}
         </button>
         </div>
     );
