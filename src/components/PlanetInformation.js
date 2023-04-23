@@ -9,7 +9,7 @@ const PlanetInformation = () => {
   const { planetInfo, activeButton, buttonCategory } = usePlanetContext();
 
   return (
-    <div className="INFO-CONTAINER custom-grid-pi gap-10">
+    <div className="INFO-CONTAINER custom-grid-pi gap-10 min-h-[420px]">
       <h1 className="HEADING row-span-1 col-span-1 flex items-end text-6xl -mb-5">
         {planetInfo.name.toUpperCase()}
       </h1>
