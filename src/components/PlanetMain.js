@@ -27,24 +27,24 @@ const PlanetMain = () => {
     updateActiveButton(activeButton);
   }, [activeButton, updateActiveButton]);
 
-  // make sure info loads before rendering - could be improved with async await
+  // make sure info loads before rendering - improve with loading state in context in future
   if (!planetInfo) {
     return <div>Loading...</div>;
   }
 
   return (
     <>
-    <div className = 'custom-grid'>
-      <div className="row-span-1 col-span-6 ">
+    <div className = 'custom-grid '>
+      <div className="row-span-1 col-span-6 w-full">
         <Header />
       </div>
       <div className = "row-start-2 row-end-2 col-start-2 col-end-5 flex justify-center items-center">
         <PlanetImager />
       </div>
-      <div className="row-start-2 row-end-3 col-start-5 col-end-6 flex  justify-items-center">
+      <div className="row-start-2 row-end-3 col-start-5 col-end-6 flex items-center w-full">
         <PlanetInformation />
       </div>
-      <div className = "row-start-3 row-end-3 col-start-2 col-end-6 flex items-center justify-self-end w-[100%] gap-8">
+      <div className = "row-start-3 row-end-3 col-start-2 col-end-6 flex items-start justify-self-end w-[100%] gap-8">
       <PlanetStats />
       </div>
       </div>
