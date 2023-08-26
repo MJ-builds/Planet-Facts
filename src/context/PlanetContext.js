@@ -27,7 +27,16 @@ export const PlanetProvider = ({ children }) => {
       try {
         const response = await fetch("/data.json");
         const data = await response.json();
-        setPlanetData(data);
+  
+        // Normalize data
+        const normalizedData = data.reduce((acc, planet) => {
+          return {
+            ...acc,
+            [planet.name.toLowerCase()]: planet,
+          };
+        }, {});
+  
+        setPlanetData(normalizedData);
       } catch (error) {
         console.log(error);
       }
@@ -36,12 +45,10 @@ export const PlanetProvider = ({ children }) => {
   }, []);
 
   useEffect(() => {
-    if (planetData.length > 0 && activePlanet) {
-      const filteredPlanets = planetData.filter(
-        (planet) => planet.name.toLowerCase() === activePlanet.toLowerCase()
-      );
-
-      const mappedPlanetInfo = filteredPlanets.map((planet) => ({
+    if (Object.keys(planetData).length > 0 && activePlanet) {
+      const planet = planetData[activePlanet.toLowerCase()];
+  
+      const planetInfo = {
         name: planet.name,
         overview_content: planet.overview.content,
         overview_source: planet.overview.source,
@@ -57,11 +64,9 @@ export const PlanetProvider = ({ children }) => {
         image_structure: planet.images.internal,
         image_geology: planet.images.geology,
         button_color: planet.color,
-      }));
-
-      if (mappedPlanetInfo.length > 0) {
-        setPlanetInfo(mappedPlanetInfo[0]);
-      }
+      };
+  
+      setPlanetInfo(planetInfo);
     }
   }, [planetData, activePlanet]);
 
