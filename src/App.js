@@ -1,4 +1,5 @@
 import React from "react";
+
 import { BrowserRouter as Router, Route, Routes, Navigate } from "react-router-dom";
 
 import "./App.css";
@@ -13,6 +14,7 @@ function App() {
         <Routes>
         <Route path="/" element={<Navigate to="/planets/earth" />} />
         <Route path="/planets/:activePlanet" element={<PlanetMain />} />
+        <Route path="/planets/*" element={<ErrorPage />} />
         <Route path="*" element={<ErrorPage />} />
         </Routes>
       </Router>
